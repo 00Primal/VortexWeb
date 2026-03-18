@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+:root {
+    --purple: #7d5fff;
+    --purple-dark: #6c48ff;
+    --bg-dark: #08080c;
+    --glass: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: white;
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* NAWIGACJA */
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(15, 15, 20, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    padding: 15px 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-size: 24px; font-weight: 800; }
+.logo span { color: var(--purple); text-shadow: 0 0 10px var(--purple); }
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.discord-btn {
+    background: #5865F2;
+    padding: 8px 18px;
+    border-radius: 10px;
+    color: white !important;
+}
+
+/* HERO SECTION */
+header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-container { max-width: 800px; }
+
+.badge {
+    background: rgba(125, 95, 255, 0.1);
+    color: var(--purple);
+    border: 1px solid var(--purple);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 13px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+h1 { font-size: clamp(40px, 8vw, 75px); font-weight: 800; line-height: 1.1; margin-bottom: 25px; }
+.purple-text { color: var(--purple); }
+
+p { color: #aaa; font-size: 18px; margin-bottom: 40px; line-height: 1.6; }
+
+/* PRZYCISKI - NAPRAWIONE */
+.hero-actions { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+
+.main-btn {
+    background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+    padding: 18px 40px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 10px 30px rgba(125, 95, 255, 0.4);
+    transition: 0.3s transform, 0.3s box-shadow;
+}
+
+.sec-btn {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 18px 40px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.main-btn:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(125, 95, 255, 0.6); }
+.sec-btn:hover { background: rgba(255, 255, 255, 0.1); }
+
+/* STATUS */
+.status-box { margin-top: 30px; font-size: 14px; color: #888; }
+.dot { height: 10px; width: 10px; background-color: #2ecc71; border-radius: 50%; display: inline-block; margin-right: 5px; box-shadow: 0 0 10px #2ecc71; }
+
+/* FEATURES */
+#features { display: flex; justify-content: center; gap: 25px; padding: 100px 20px; flex-wrap: wrap; }
+.feature-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 40px;
+    border-radius: 25px;
+    width: 350px;
+    text-align: center;
+    transition: 0.4s;
+}
+.feature-card i { font-size: 40px; color: var(--purple); margin-bottom: 20px; }
+.feature-card.highlighted { border-color: var(--purple); background: rgba(125, 95, 255, 0.05); }
+.feature-card:hover { transform: translateY(-10px); background: rgba(255, 255, 255, 0.05); }
+
+/* DOWNLOAD SECTION */
+.download-section { padding: 100px 20px; display: flex; justify-content: center; }
+.glass-card {
+    background: linear-gradient(135deg, rgba(20, 20, 30, 0.8), rgba(10, 10, 15, 0.8));
+    backdrop-filter: blur(20px);
+    padding: 60px;
+    border-radius: 40px;
+    border: 1px solid var(--glass-border);
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.download-btn-big {
+    display: inline-block;
+    margin-top: 30px;
+    background: white;
+    color: black;
+    padding: 20px 50px;
+    border-radius: 20px;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.download-btn-big:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 255, 255, 0.2); }
+.vt-link { margin-top: 20px; }
+.vt-link a { color: #666; text-decoration: none; font-size: 14px; transition: 0.3s; }
+.vt-link a:hover { color: var(--purple); }
+
+footer { padding: 50px; text-align: center; color: #444; border-top: 1px solid #111; }
